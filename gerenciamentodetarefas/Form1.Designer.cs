@@ -82,6 +82,7 @@
             button3.TabIndex = 2;
             button3.Text = "Tarefas Concluidas";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -120,12 +121,13 @@
             // 
             // label2
             // 
-            label2.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Gill Sans MT", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(26, 9);
             label2.Name = "label2";
-            label2.Size = new Size(274, 27);
+            label2.Size = new Size(360, 45);
             label2.TabIndex = 0;
             label2.Text = "Gerenciador de Tarefas";
+            label2.Click += label2_Click_1;
             // 
             // Form1
             // 

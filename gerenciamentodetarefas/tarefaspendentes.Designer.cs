@@ -35,9 +35,7 @@
             descbox = new TextBox();
             button5 = new Button();
             button1 = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
+            radioButton1 = new RadioButton();
             SuspendLayout();
             // 
             // textBoxtarefa
@@ -87,7 +85,7 @@
             // 
             button5.BackColor = Color.Pink;
             button5.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(366, 204);
+            button5.Location = new Point(97, 301);
             button5.Name = "button5";
             button5.Size = new Size(70, 37);
             button5.TabIndex = 14;
@@ -99,7 +97,7 @@
             // 
             button1.BackColor = Color.Pink;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(442, 204);
+            button1.Location = new Point(173, 301);
             button1.Name = "button1";
             button1.Size = new Size(68, 37);
             button1.TabIndex = 15;
@@ -107,38 +105,17 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // checkBox1
+            // radioButton1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(359, 284);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(76, 19);
-            checkBox1.TabIndex = 16;
-            checkBox1.Text = "Pendente";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(358, 307);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(73, 19);
-            checkBox2.TabIndex = 17;
-            checkBox2.Text = "Atrasado";
-            checkBox2.UseVisualStyleBackColor = true;
-            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(357, 336);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(81, 19);
-            checkBox3.TabIndex = 18;
-            checkBox3.Text = "Concluido";
-            checkBox3.UseVisualStyleBackColor = true;
-            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(320, 214);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(80, 19);
+            radioButton1.TabIndex = 19;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Concluído";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // tarefaspendentes
             // 
@@ -146,9 +123,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LavenderBlush;
             ClientSize = new Size(791, 450);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(radioButton1);
             Controls.Add(button1);
             Controls.Add(button5);
             Controls.Add(label3);
@@ -172,8 +147,6 @@
         private Button button5;
         private Button button1;
         private TextBox textBoxtarefa;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
+        private RadioButton radioButton1;
     }
 }

@@ -28,18 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            textBoxtarefa = new TextBox();
+            label2 = new Label();
             SuspendLayout();
+            // 
+            // textBoxtarefa
+            // 
+            textBoxtarefa.Location = new Point(128, 77);
+            textBoxtarefa.Multiline = true;
+            textBoxtarefa.Name = "textBoxtarefa";
+            textBoxtarefa.Size = new Size(240, 272);
+            textBoxtarefa.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Gill Sans MT", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(322, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(360, 45);
+            label2.TabIndex = 1;
+            label2.Text = "Gerenciador de Tarefas";
             // 
             // tarefasconcluidas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LavenderBlush;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(textBoxtarefa);
             Name = "tarefasconcluidas";
             Text = "tarefasconcluidas";
+            Load += tarefasconcluidas_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBoxtarefa;
+        private Label label2;
     }
 }

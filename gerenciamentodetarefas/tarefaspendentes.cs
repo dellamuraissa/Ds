@@ -13,6 +13,7 @@ namespace gerenciamentodetarefas
     public partial class tarefaspendentes : Form
     {
         private int tarefaAtualIndex = 0;
+        
 
         public tarefaspendentes()
         {
@@ -57,6 +58,7 @@ namespace gerenciamentodetarefas
             }
             textBoxtarefa.Text = string.Join(Environment.NewLine, "Exibindo as tarefas com Status:", status);
             textBoxtarefa.Multiline = true;
+            textBoxtarefa.ScrollBars = ScrollBars.Vertical;   // Adiciona barra de rolagem vertical, se necessário
             textBoxtarefa.Text = string.Join(Environment.NewLine, verifica);
 
 
@@ -81,20 +83,23 @@ namespace gerenciamentodetarefas
         private void button5_Click(object sender, EventArgs e)
         {
             // Volta para o cliente anterior, se possível
-            if (tarefaAtualIndex > 0)
+            //if (tarefaAtualIndex > 0)
             {
                 tarefaAtualIndex--;
                 AtualizarCampos();
+                radioButton1.Checked = false;
+
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             // Avança para o próximo cliente, se possível
-            if (tarefaAtualIndex < DadosCompartilhados.Tarefas.Count - 1)
+           // if (tarefaAtualIndex<DadosCompartilhados.Tarefas.Count - 1)
             {
                 tarefaAtualIndex++;
                 AtualizarCampos();
+                radioButton1.Checked = false;
             }
         }
 
@@ -105,36 +110,34 @@ namespace gerenciamentodetarefas
 
         private void tarefaspendentes_Load(object sender, EventArgs e)
         {
-            listarTodos();
+            listarStatus("Pendente");
             AtualizarCampos();
         }
 
-
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+       private void AtualizarStatus(string parametro)
         {
-            listarStatus("Pendente");
-            checkBox1.Checked = true;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
+            for (int i = 0; i< DadosCompartilhados.Tarefas.Count; i++)
+            {
+                if (parametro == DadosCompartilhados.Tarefas[i].Nome)
+                {
+                    DadosCompartilhados.Tarefas[i].Status = "Concluído";
+                }
+                
+            }
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            listarStatus("Atrasado");
-            checkBox1.Checked = false;
-            checkBox2.Checked = true;
-            checkBox3.Checked = false;
+            
+            // seu código para alterar a variável aqui!!!!!!!
+            if (radioButton1.Checked == true)
+            {
+                AtualizarStatus(namebox.Text);
+            }
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            listarStatus("Concluido");
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = true;
-        }
 
-        
+
+
     }
 }

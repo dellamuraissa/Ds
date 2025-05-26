@@ -40,6 +40,16 @@ namespace gerenciamentodetarefas
             panel3.Controls.Add(addtarefa);
             addtarefa.Show();
         }
+        private void mostrartarefasconcluidas()
+        {
+            tarefasconcluidas tarefaCon = new tarefasconcluidas();
+            tarefaCon.TopLevel = false;
+            tarefaCon.FormBorderStyle = FormBorderStyle.None;
+            tarefaCon.Dock = DockStyle.Fill;
+            panel3.Controls.Clear();
+            panel3.Controls.Add(tarefaCon);
+            tarefaCon.Show();
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             mostrartarefaspendentes();
@@ -48,6 +58,16 @@ namespace gerenciamentodetarefas
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mostrartarefasconcluidas();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace gerenciamentodetarefas
         {
             new Tarefa
             {
-                Nome = "Matématica",
+                Nome = "Matemática",
                 Descricao = "Lista de exercicios",
                 Status = "Pendente",
             },
@@ -28,7 +28,7 @@ namespace gerenciamentodetarefas
             {
                 Nome = "Inglês",
                 Descricao = "Prova",
-                Status = "Atrasado",
+                Status = "Pendente",
 
             },
         };

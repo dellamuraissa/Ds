@@ -35,7 +35,7 @@ namespace gerenciamentodetarefas
             {
                 Nome = namebox.Text,
                 Descricao = descbox.Text,
-                Status = "Pendentes",
+                Status = "Pendente"
             };
 
             // Adiciona a nova pessoa à lista de pessoas
